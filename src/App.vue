@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <!-- <Todos v-bind:todos="todos" v-on:delete-todo="deleteTodo"/> -->
-    <Todos v-bind:todos="todos" v-on:delete-todo="deleteTodo"/>
+      <Todos v-bind:todos="todos" v-on:delete-todo="deleteTodo"/>
     <AddTodo v-on:add-todo="addTodo"/>
+
   </div>
 </template>
 <script>
@@ -49,12 +50,11 @@ export default {
     addTodo(newTodoObj) {
       console.log("ADD RUNNING")
       this.todos = [...this.todos, newTodoObj];
-    },
-    deleteTodo(todoId) {
-      console.log("DELETE RUNNING app")
-      this.todos = this.todos.filter(todo => todo.id !== todoId)
-//      this.todos = this.todos.filter(todo => todo.id !== todoId);
+    },    deleteTodo(todoId) {
+       console.log("DELETE RUNNING app")
+      this.todos = this.todos.filter(todo => todo.id !== todoId);
     }
+ 
   }
 }
 </script>
