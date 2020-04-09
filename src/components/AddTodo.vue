@@ -24,8 +24,9 @@ export default {
       const newTodoObj = {
         //  id: "13465232",
         //  id: String(Vue.use(UUID)),
+        
         id: uuid.v1(),
-        title: this.title,
+        title: this.title,        
         completed: false
       }
 
